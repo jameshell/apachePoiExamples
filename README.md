@@ -12,3 +12,9 @@ Ways to handle MS Office files with Java, going to focus first on .xls and .xlsx
             System.out.println(e.getMessage());
           }   
   ```
+  
+- Creating Sheets inside the file
+  ```
+  Sheet sheet1 = wb.createSheet("Your First Sheet");  
+  Sheet sheet2 = wb.createSheet("Your Second Sheet");  
+  ```
