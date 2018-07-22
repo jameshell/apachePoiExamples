@@ -6,13 +6,25 @@ Ways to handle MS Office files with Java, going to focus first on .xls and .xlsx
 ### Getting Started
 Configure your Java project dependencies in order to use Apache POI. You can either use Maven, Gradle or just download the JARs from here: https://poi.apache.org/download.html.
 
-- Maven POM Configuration:
+- Maven POM Configuration for HSSF(for Excel 97-2003):
 
   ```
   <dependencies>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
+            <version>Insert here desired Version</version>
+        </dependency>
+    </dependencies>
+  ```
+  
+- Maven POM Configuration for XSSF(for Excel 2007+):
+
+  ```
+  <dependencies>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
             <version>Insert here desired Version</version>
         </dependency>
     </dependencies>
