@@ -35,3 +35,11 @@ Configure your Java project dependencies in order to use Apache POI. You can eit
   Sheet sheet1 = wb.createSheet("Your First Sheet");  
   Sheet sheet2 = wb.createSheet("Your Second Sheet");  
   ```
+  
+- Setting up the row and col where to insert data
+  ```
+  Sheet sheet1 = wb.createSheet("Your First Sheet"); 
+  Row row = sheet1.createRow(2);   //The integer represents the row/col position.
+  Cell cell = row.createCell(2);
+  cell.setCellValue("Value 1");    //Value that is to be written in the cell.
+  ```
