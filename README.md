@@ -1,10 +1,10 @@
 
-
-  [![CircleCI](https://img.shields.io/circleci/project/github/jameshell/apachePoiExamples.svg)](https://circleci.com/gh/jameshell/apachePoiExamples)
-
-
 # Apache POI Examples
 Ways to handle MS Office files with Java, going to focus first on .xls and .xlsx MS Excel files using Apache POI.
+
+| Build  | Status |
+| ------------- | ------------- |
+| CircleCI  | [![CircleCI](https://img.shields.io/circleci/project/github/jameshell/apachePoiExamples.svg)](https://circleci.com/gh/jameshell/apachePoiExamples)  |
 
 ### Getting Started
 Configure your Java project dependencies in order to use Apache POI. You can either use Maven, Gradle or just download the JARs from here: https://poi.apache.org/download.html.
