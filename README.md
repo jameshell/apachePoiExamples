@@ -1,4 +1,4 @@
-# Apache Poi Examples
+# Apache POI Examples
 Ways to handle MS Office files with Java, going to focus first on .xls and .xlsx MS Excel files using Apache POI.
 
 #### Microsoft Excel 97-2003
