@@ -23,7 +23,7 @@ public class Main {
         in a 97-2003 format since is uses the HSSFWorkbook.
         */
         Workbook wb = new HSSFWorkbook(); 
-        try(OutputStream fileOut = new FileOutputStream("Javatpoint.xls")){
+        try(OutputStream fileOut = new FileOutputStream("TheNameOfYourFile.xls")){
             wb.write(fileOut);  
         } catch(Exception e){
             System.out.println(e.getMessage());
