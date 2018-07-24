@@ -9,8 +9,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Date;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CreationHelper;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -35,6 +38,9 @@ public class Main {
         */
         Workbook wb= new XSSFWorkbook();
         
+        //Creation helper will aid us in creating a style for the sheet.
+        CreationHelper helper = wb.getCreationHelper();
+        
         try(OutputStream fileOut = new FileOutputStream("TheNameOfYourFile.xlsx")){
             
             //The object Sheet will create allow the creation of sheets.
@@ -51,6 +57,19 @@ public class Main {
             cell.setCellValue("Value 1"); 
             
             
+            //A style must be created on the workbook that was created to be able to insert a date.
+            CellStyle style = wb.createCellStyle();
+            style.setDataFormat(helper.createDataFormat().getFormat("d/m/yy h:mm"));
+            
+            //We will now create another cell on the same sheet to insert a date input example.
+            Row row1 = sheet1.createRow(3);
+            Cell cell1 = row.createCell(3);
+            
+            //System's current date is created with the new format.
+            cell1.setCellValue(new Date());
+            cell1.setCellStyle(style);
+            
+           //File is created.
             wb.write(fileOut);  
         } catch(Exception e){
             System.out.println(e.getMessage());
