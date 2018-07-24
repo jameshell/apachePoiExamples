@@ -55,3 +55,21 @@ Configure your Java project dependencies in order to use Apache POI. You can eit
   Cell cell = row.createCell(2);
   cell.setCellValue("Value 1");    //Value that is to be written in the cell.
   ```
+  
+  - Inserting Date sample with a specified format in a cell.
+  ```
+  //Creation helper will aid us in creating a style for the sheet.
+    CreationHelper helper = wb.getCreationHelper();
+        
+   //A style must be created on the workbook in order to be able to insert a date with the desired format.
+     CellStyle style = wb.createCellStyle();
+     style.setDataFormat(helper.createDataFormat().getFormat("d/m/yy h:mm"));
+            
+    //We will now create another cell on the same sheet to insert a date input example.
+      Row row1 = sheet1.createRow(3);
+      Cell cell1 = row1.createCell(3);
+            
+     //System's current date is created with the new format within the cell.
+       cell1.setCellValue(new Date());
+       cell1.setCellStyle(style);
+  ```
