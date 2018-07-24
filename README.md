@@ -56,7 +56,7 @@ Configure your Java project dependencies in order to use Apache POI. You can eit
   cell.setCellValue("Value 1");    //Value that is to be written in the cell.
   ```
   
-  - Inserting Date sample with a specified format in a cell.
+- Inserting Date sample with a specified format in a cell.
   ```
   //Creation helper will aid us in creating a style for the sheet.
     CreationHelper helper = wb.getCreationHelper();
