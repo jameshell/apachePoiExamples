@@ -63,7 +63,7 @@ public class Main {
             
             //We will now create another cell on the same sheet to insert a date input example.
             Row row1 = sheet1.createRow(3);
-            Cell cell1 = row.createCell(3);
+            Cell cell1 = row1.createCell(3);
             
             //System's current date is created with the new format.
             cell1.setCellValue(new Date());
