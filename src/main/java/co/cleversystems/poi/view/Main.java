@@ -45,7 +45,7 @@ public class Main {
             
             //The object Sheet will create allow the creation of sheets.
             Sheet sheet1 = wb.createSheet("Your First Sheet");
-            Sheet sheet2 = wb.createSheet("Your Second Sheet"); 
+            Sheet sheet2 = wb.createSheet("Your Second Sheet");
             
             /*On the previously created sheet set the row and cell where you want to write data.
               Note that both create row and cell method receive an integer.
@@ -57,7 +57,7 @@ public class Main {
             cell.setCellValue("Value 1"); 
             
             
-            //A style must be created on the workbook that was created to be able to insert a date.
+            //A style must be created on the workbook in order to be able to insert a date with the desired format.
             CellStyle style = wb.createCellStyle();
             style.setDataFormat(helper.createDataFormat().getFormat("d/m/yy h:mm"));
             
